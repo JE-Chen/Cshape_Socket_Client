@@ -12,10 +12,9 @@ namespace Cshape_Socket
     {
         static void Main(string[] args)
         {
-            BlockingSocket blockingSocket = new BlockingSocket("localhost",5555);
-            blockingSocket.Sendmessage("Hello Java Server I'm C# Client");
-            Thread.Sleep(5000);
-            blockingSocket.Close();
+            SocketClient socketClient = new SocketClient("localhost",5555);
+            socketClient.SendMessage("Hello Server I'm C#");
+            socketClient.Close();
         }
     }
 }
